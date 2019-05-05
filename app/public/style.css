@@ -1,0 +1,12 @@
+/* survey.html */
+.form-check-input{
+    padding-bottom: 3px;
+}
+#disagree{
+    padding-right: 8px;
+}
+
+/* home.html */
+#bolder-id {
+    font-weight: 600;
+}
