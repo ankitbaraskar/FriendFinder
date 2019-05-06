@@ -343,7 +343,13 @@
             };
 
             console.log(userInfo);
-        })
+
+            $.post("/api/friends",userInfo,(data)=>{
+                console.log(data);
+            });
+
+
+        });
         </script>
 </body>
 

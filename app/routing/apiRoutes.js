@@ -10,5 +10,10 @@ apiRouter.get('/friends', (req,res)=>{
     res.json(friendsArray);
 });
 
+apiRouter.post('/friends',(req,res)=>{
+    friendsArray.push(req.body);
+});
+
+
 // export the router
 module.exports = apiRouter;
