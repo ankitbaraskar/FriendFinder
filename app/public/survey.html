@@ -329,16 +329,16 @@
                 name: $("#name-id").val().trim(),
                 photo: $("#photo-id").val().trim(),
                 scores:[
-                    $("input:radio[name='inlineRadioOptions1']:checked").val(),
-                    $("input:radio[name='inlineRadioOptions2']:checked").val(),
-                    $("input:radio[name='inlineRadioOptions3']:checked").val(),
-                    $("input:radio[name='inlineRadioOptions4']:checked").val(),
-                    $("input:radio[name='inlineRadioOptions5']:checked").val(),
-                    $("input:radio[name='inlineRadioOptions6']:checked").val(),
-                    $("input:radio[name='inlineRadioOptions7']:checked").val(),
-                    $("input:radio[name='inlineRadioOptions8']:checked").val(),
-                    $("input:radio[name='inlineRadioOptions9']:checked").val(),
-                    $("input:radio[name='inlineRadioOptions10']:checked").val()
+                    parseInt($("input:radio[name='inlineRadioOptions1']:checked").val()),
+                    parseInt($("input:radio[name='inlineRadioOptions2']:checked").val()),
+                    parseInt($("input:radio[name='inlineRadioOptions3']:checked").val()),
+                    parseInt($("input:radio[name='inlineRadioOptions4']:checked").val()),
+                    parseInt($("input:radio[name='inlineRadioOptions5']:checked").val()),
+                    parseInt($("input:radio[name='inlineRadioOptions6']:checked").val()),
+                    parseInt($("input:radio[name='inlineRadioOptions7']:checked").val()),
+                    parseInt($("input:radio[name='inlineRadioOptions8']:checked").val()),
+                    parseInt($("input:radio[name='inlineRadioOptions9']:checked").val()),
+                    parseInt($("input:radio[name='inlineRadioOptions10']:checked").val())
                 ]
             };
 
