@@ -372,7 +372,7 @@
             $.post("/api/friends", userInfo, (data) => {
                 console.log(data);
                 $('#match-name').text(data.name);
-                $('match-img').attr('scr',data.photo);
+                $('match-img').attr('src',data.photo);
 
                 $('results-modal').modal('toggle');
             });
