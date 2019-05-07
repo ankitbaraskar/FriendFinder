@@ -15,10 +15,12 @@ apiRouter.get('/friends', (req,res)=>{
 
 apiRouter.post('/friends',(req,res)=>{
     friendsArray.push(req.body);
-    loopThroughAllFriends(friendsArray);
+    // send match object as a response to the client.
+    res.json(loopThroughAllFriends(friendsArray));
 
 });
 
+// to get sum of differences
 function sumOfDifferenceBetweenTwoArrays(arrayFromUser,arrayAlreadyExists){
     var sum=0;
     for(let i=0;i<arrayFromUser.length;i++){
@@ -27,6 +29,7 @@ function sumOfDifferenceBetweenTwoArrays(arrayFromUser,arrayAlreadyExists){
     return sum;
 }
 
+// logic to get the match
 function loopThroughAllFriends(arrayOfAllFriends){
     var placeHolderArray =[];
     var indexOfLastElement = arrayOfAllFriends.length - 1;
@@ -39,10 +42,12 @@ function loopThroughAllFriends(arrayOfAllFriends){
         placeHolderArray.push(object);
     }
 
+    // referencing the below protoype logic
     var resultFriendObject = placeHolderArray.hasMin('score');
-    console.log(resultFriendObject);
+    return resultFriendObject;
 }
 
+// loop through the array of objects and find min attrib
 Array.prototype.hasMin = function(attrib) {
     return this.reduce(function(prev, curr){ 
         return prev[attrib] < curr[attrib] ? prev : curr; 
